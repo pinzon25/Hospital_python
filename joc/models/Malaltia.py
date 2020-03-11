@@ -1,3 +1,4 @@
+from odoo import models, fields, api
 class Malaltia:
 	def __init__(self, codi, nom, causaBaixa, tractament, duradaTractament):
         self.codi = codi
