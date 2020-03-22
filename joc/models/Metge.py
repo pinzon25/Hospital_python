@@ -1,4 +1,5 @@
 from odoo import models, fields, api
+from model import Persona
 class Metge(Persona):
    def __init__(self):
        self.numEmpleat = numEmpleat
