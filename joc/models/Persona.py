@@ -1,3 +1,4 @@
+from odoo import models, fields, api
 from abc import ABC, abstractmethod
 class Persona(ABC):
     def __init__(self, name, cognom1, cognom2, numSegSocial, nif, telefon):
