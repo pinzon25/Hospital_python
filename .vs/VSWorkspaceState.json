@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\joc",
+    "\\joc\\controllers",
     "\\joc\\models"
   ],
-  "SelectedNode": "\\joc\\models\\Persona.py",
+  "SelectedNode": "\\joc\\models\\Hospital.py",
   "PreviewInSolutionExplorer": false
 }
