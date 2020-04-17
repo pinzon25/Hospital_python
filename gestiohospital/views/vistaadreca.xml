@@ -1,0 +1,14 @@
+﻿<odoo>
+	<!--#Made by Ricard Pinzon Suller-->
+	<data>
+		<record model="ir.actions.act_window" id="adreca_list_action">
+			<field name="name">Adreca</field>
+			<field name="res_model">hospitalpacient</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		<menuitem id="Hospital_menu" name="Hospital"/>
+		<menuitem id="metge_menu" name="Metges" parent="Hospital_menu"/>
+		<menuitem id="metge" name="crear metge" parent="metge_menu" action="metge_list_action"/>
+	</data>
+</odoo>

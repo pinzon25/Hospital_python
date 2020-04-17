@@ -1,0 +1,80 @@
+﻿<odoo>
+	<!--#Made by Ricard Pinzon Suller-->
+	
+	<data>
+		<record model="ir.actions.act_window" id="hospital_list_action">
+			<field name="name">Hospital</field>
+			<field name="res_model">hospitalprincipal</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="metge_list_action">
+			<field name="name">Metge</field>
+			<field name="res_model">hospitalmetge</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="pacient_list_action">
+			<field name="name">Pacient</field>
+			<field name="res_model">pacient.hospital</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		
+
+		<menuitem name="Hospital" id="gestiohospital.menu_principal"/>
+		<menuitem id="hospitalprincipal_menu" name="Hospital" />
+		<menuitem id="hospital_menu" name="Hospital" parent="hospitalprincipal_menu" />
+		<menuitem id="hospital" name="crear hospital" parent="hospital_menu" action="hospital_list_action"/>
+
+		<menuitem id="pacient_menu" name="Pacients" parent="hospitalprincipal_menu"/>
+		<menuitem id="pacient" name="Crear pacient" parent="pacient_menu" action="pacient_list_action"/>
+		
+		<menuitem id="metge_menu" name="Metges" parent="hospitalprincipal_menu"/>
+		<menuitem id="metge" name="crear metge" parent="metge_menu" action="metge_list_action"/>
+	</data>
+
+
+	<!--Conjunt XML que enllaca aquest xml amb el de referencia que es el dades.xml-->
+	<data>
+		<record id="hr_view_employee_form_inherit" model="ir.ui.view">
+			<field name="name">mostradades</field>
+			<field name="model">hospitalmetge</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="nom" position="after">
+						<field name="Nom"/>
+					</field>
+					<field name="cognoms" position="after">
+						<field name="Cognoms"/>
+					</field>
+					<field name="numSegSocial" position="after">
+						<field name="Numero seguretat social"/>
+					</field>
+					<field name="nif" position="after">
+						<field name="Nif"/>
+					</field>
+					<field name="telefon" position="after">
+						<field name="Telefon"/>
+					</field>
+					<field name="numEmpleat" position="after">
+						<field name="Numero empleat"/>
+					</field>
+					<field name="salariEmpleat" position="after">
+						<field name="Salari"/>
+					</field>
+					<field name="codiCompteCorrent" position="after">
+						<field name="Compte corrent"/>
+					</field>
+				</tree>
+			</field>
+		</record>
+		
+		
+	</data>
+		
+		
+	</odoo>

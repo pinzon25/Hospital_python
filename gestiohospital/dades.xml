@@ -1,0 +1,22 @@
+﻿<odoo>
+	<!--#Made by Ricard Pinzon Suller-->
+	<data>
+		<record model="ir.ui.view" id="vista_dades_form">
+			<field name="name">vista_dades</field>
+			<field name="model">hospitalmetge</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="" name="Metges">
+							<field name="numEmpleat" />
+							<field name="salariEmpleat" />
+							<field name="codiCompteCorrent" />
+				</tree>	
+			</field>
+		</record>
+
+
+	</data>
+
+
+</odoo>
+
