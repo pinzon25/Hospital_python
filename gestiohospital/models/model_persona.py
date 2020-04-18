@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #Made by Ricard Pinzon Suller
 from odoo import models, fields, api
+from . import adreca_persona #Ultim afegit
 class Persona(models.Model):
     _name='metge.hospital'
 
@@ -29,6 +30,14 @@ class Persona(models.Model):
         required=True,
         size=9
         )
+    #ultim afegit
+    adreca= fields.Many2one( #Moltes persones poden tenir una adreca.
+        'adreca.hospital', 
+        string='Adreca')
+
+
+
+
 
 #Made by Ricard Pinzon Suller
 #class Persona(ABC):
