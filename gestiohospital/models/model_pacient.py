@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields, api
 from . import model_persona
-
-class Pacienthospital(model_persona.Persona):
+from . import adreca_persona
+class Pacienthospital(model_persona.Persona, adreca_persona.Adreca):
     _name='pacient.hospital' 
     #_inherit=''
    # _inherit='persona.gestiohospital'
