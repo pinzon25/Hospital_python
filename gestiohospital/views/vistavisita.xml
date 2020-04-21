@@ -1,0 +1,29 @@
+<odoo>
+	<!--#Made by Ricard Pinzon Suller-->
+	<data>
+		<record model="ir.actions.act_window" id="visita_list_action">
+			<field name="name">Visita</field>
+			<field name="res_model">visita.pacient</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+	</data>
+
+	<!--Conjunt XML que enllaca aquest xml amb el de referencia que es el dades.xml-->
+	<data>
+		<record id="hr_view_employee_form_inherit" model="ir.ui.view">
+			<field name="name">mostradades</field>
+			<field name="model">visita.pacient</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="data" position="after">
+						<field name="Data"/>
+					</field>
+				</tree>
+			</field>
+		</record>
+
+
+	</data>
+
+</odoo>

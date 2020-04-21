@@ -22,6 +22,20 @@
 			<field name="view_type">form</field>
 			<field name="view_mode">tree,form</field>
 		</record>
+		
+		<record model="ir.actions.act_window" id="malaltia_list_action">
+			<field name="name">Malaltia</field>
+			<field name="res_model">malaltia.pacient</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		
+		<record model="ir.actions.act_window" id="visita_list_action">
+			<field name="name">Visita</field>
+			<field name="res_model">visita.pacient</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
 
 		
 
@@ -35,6 +49,12 @@
 		
 		<menuitem id="metge_menu" name="Metges" parent="hospitalprincipal_menu"/>
 		<menuitem id="metge" name="crear metge" parent="metge_menu" action="metge_list_action"/>
+
+		<menuitem id="malaltia_menu" name="Malalties" parent="hospitalprincipal_menu"/>
+		<menuitem id="malaltia" name="Crear malaltia" parent="malaltia_menu" action="malaltia_list_action"/>
+	
+		<menuitem id="visita_menu" name="Visites" parent="hospitalprincipal_menu"/>
+		<menuitem id="visita" name="Crear visita" parent="visita_menu" action="visita_list_action"/>
 	</data>
 
 
