@@ -2,8 +2,7 @@
 #Made by Ricard Pinzon Suller
 from odoo import models, fields, api
 from . import model_persona
-from . import adreca_persona
-class Metgehospital(model_persona.Persona, adreca_persona.Adreca):
+class Metgehospital(model_persona.Persona):
     _name='hospitalmetge' 
     #_inherit=''
    # _inherit='persona.gestiohospital'

@@ -1,6 +1,4 @@
 ﻿<odoo>
-	<!--#Made by Ricard Pinzon Suller-->
-	
 	<data>
 		<record model="ir.actions.act_window" id="hospital_list_action">
 			<field name="name">Hospital</field>
@@ -42,13 +40,13 @@
 		<menuitem name="Hospital" id="gestiohospital.menu_principal"/>
 		<menuitem id="hospitalprincipal_menu" name="Hospital" />
 		<menuitem id="hospital_menu" name="Hospital" parent="hospitalprincipal_menu" />
-		<menuitem id="hospital" name="crear hospital" parent="hospital_menu" action="hospital_list_action"/>
+		<menuitem id="hospital" name="Crear hospital" parent="hospital_menu" action="hospital_list_action"/>
 
 		<menuitem id="pacient_menu" name="Pacients" parent="hospitalprincipal_menu"/>
 		<menuitem id="pacient" name="Crear pacient" parent="pacient_menu" action="pacient_list_action"/>
 		
 		<menuitem id="metge_menu" name="Metges" parent="hospitalprincipal_menu"/>
-		<menuitem id="metge" name="crear metge" parent="metge_menu" action="metge_list_action"/>
+		<menuitem id="metge" name="Crear metge" parent="metge_menu" action="metge_list_action"/>
 
 		<menuitem id="malaltia_menu" name="Malalties" parent="hospitalprincipal_menu"/>
 		<menuitem id="malaltia" name="Crear malaltia" parent="malaltia_menu" action="malaltia_list_action"/>
@@ -92,9 +90,5 @@
 				</tree>
 			</field>
 		</record>
-		
-		
 	</data>
-		
-		
 	</odoo>
