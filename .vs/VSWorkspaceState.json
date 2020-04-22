@@ -1,10 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\joc",
-    "\\joc\\controllers",
-    "\\joc\\models"
+    "\\gestiohospital",
+    "\\gestiohospital\\demo",
+    "\\gestiohospital\\models",
+    "\\gestiohospital\\security",
+    "\\gestiohospital\\views"
   ],
-  "SelectedNode": "\\joc\\models\\Hospital.py",
+  "SelectedNode": "\\gestiohospital\\models\\model_persona.py",
   "PreviewInSolutionExplorer": false
 }
