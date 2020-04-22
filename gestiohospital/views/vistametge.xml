@@ -1,5 +1,7 @@
 ﻿<odoo>
 	<data>
+
+    <!--Hospital-->
 		<record model="ir.actions.act_window" id="hospital_list_action">
 			<field name="name">Hospital</field>
 			<field name="res_model">hospitalprincipal</field>
@@ -7,6 +9,29 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
+
+    <menuitem name="Hospital" id="gestiohospital.menu_principal"/>
+    <menuitem id="hospitalprincipal_menu" name="Hospital" />
+    <menuitem id="hospital_menu" name="Hospital" parent="hospitalprincipal_menu" />
+    <menuitem id="hospital" name="Crear hospital" parent="hospital_menu" action="hospital_list_action"/>
+
+    <data>
+      <record id="hr_view_hospital_form_inherit" model="ir.ui.view">
+        <field name="name">mostradades</field>
+        <field name="model">hospitalprincipal</field>
+        <field name="arch" type="xml">
+          <tree>
+            <field name="nomHospital" position="after">
+              <field name="nomHospital"/>
+            </field>
+          </tree>
+        </field>
+      </record>
+    </data>
+    
+    
+    
+    <!--Metge-->
 		<record model="ir.actions.act_window" id="metge_list_action">
 			<field name="name">Metge</field>
 			<field name="res_model">hospitalmetge</field>
@@ -14,20 +39,121 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
+    <menuitem id="metge_menu" name="Metges" parent="hospitalprincipal_menu"/>
+    <menuitem id="metge" name="Crear metge" parent="metge_menu" action="metge_list_action"/>
+
+    <data>
+      <record id="hr_view_employee_form_inherit" model="ir.ui.view">
+        <field name="name">mostradades</field>
+        <field name="model">hospitalmetge</field>
+        <field name="arch" type="xml">
+          <tree>
+            <field name="nom" position="after">
+              <field name="Nom"/>
+            </field>
+            <field name="cognoms" position="after">
+              <field name="Cognoms"/>
+            </field>
+            <field name="numSegSocial" position="after">
+              <field name="Numero seguretat social"/>
+            </field>
+            <field name="nif" position="after">
+              <field name="Nif"/>
+            </field>
+            <field name="telefon" position="after">
+              <field name="Telefon"/>
+            </field>
+            <field name="numEmpleat" position="after">
+              <field name="Numero empleat"/>
+            </field>
+            <field name="salariEmpleat" position="after">
+              <field name="Salari"/>
+            </field>
+            <field name="codiCompteCorrent" position="after">
+              <field name="Compte corrent"/>
+            </field>
+          </tree>
+        </field>
+      </record>
+    </data>
+    
+    <!--Pacient-->
 		<record model="ir.actions.act_window" id="pacient_list_action">
 			<field name="name">Pacient</field>
 			<field name="res_model">pacient.hospital</field>
 			<field name="view_type">form</field>
 			<field name="view_mode">tree,form</field>
 		</record>
-		
-		<record model="ir.actions.act_window" id="malaltia_list_action">
+
+    <menuitem id="pacient_menu" name="Pacients" parent="hospitalprincipal_menu"/>
+    <menuitem id="pacient" name="Crear pacient" parent="pacient_menu" action="pacient_list_action"/>
+
+    <data>
+      <record id="hr_view_pacient_hospital_form_inherit" model="ir.ui.view">
+        <field name="name">mostradades</field>
+        <field name="model">pacient.hospital</field>
+        <field name="arch" type="xml">
+          <tree>
+            <field name="nom" position="after">
+              <field name="Nom"/>
+            </field>
+            <field name="cognoms" position="after">
+              <field name="Cognoms"/>
+            </field>
+            <field name="numSegSocial" position="after">
+              <field name="Numero seguretat social"/>
+            </field>
+            <field name="nif" position="after">
+              <field name="Nif"/>
+            </field>
+            <field name="telefon" position="after">
+              <field name="Telefon"/>
+            </field>
+          </tree>
+        </field>
+      </record>
+    </data>
+
+
+    <!--Malaltia-->
+    <record model="ir.actions.act_window" id="malaltia_list_action">
 			<field name="name">Malaltia</field>
 			<field name="res_model">malaltia.pacient</field>
 			<field name="view_type">form</field>
 			<field name="view_mode">tree,form</field>
 		</record>
-		
+
+    <menuitem id="malaltia_menu" name="Malalties" parent="hospitalprincipal_menu"/>
+    <menuitem id="malaltia" name="Crear malaltia" parent="malaltia_menu" action="malaltia_list_action"/>
+
+    <data>
+      <record id="hr_view_malaltia_form_inherit" model="ir.ui.view">
+        <field name="name">mostradades</field>
+        <field name="model">malaltia.pacient</field>
+        <field name="arch" type="xml">
+          <tree>
+            <field name="codi" position="after">
+              <field name="codi"/>
+            </field>
+            <field name="nom" position="after">
+              <field name="nom"/>
+            </field>
+            <field name="causaBaixa" position="after">
+              <field name="causaBaixa"/>
+            </field>
+            <field name="tractament" position="after">
+              <field name="tractament"/>
+            </field>
+            <field name="duradaTractament" position="after">
+              <field name="duradaTractament"/>
+            </field>
+          </tree>
+        </field>
+      </record>
+    </data>
+
+
+    <!--Visita-->
 		<record model="ir.actions.act_window" id="visita_list_action">
 			<field name="name">Visita</field>
 			<field name="res_model">visita.pacient</field>
@@ -35,60 +161,22 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
-		
-
-		<menuitem name="Hospital" id="gestiohospital.menu_principal"/>
-		<menuitem id="hospitalprincipal_menu" name="Hospital" />
-		<menuitem id="hospital_menu" name="Hospital" parent="hospitalprincipal_menu" />
-		<menuitem id="hospital" name="Crear hospital" parent="hospital_menu" action="hospital_list_action"/>
-
-		<menuitem id="pacient_menu" name="Pacients" parent="hospitalprincipal_menu"/>
-		<menuitem id="pacient" name="Crear pacient" parent="pacient_menu" action="pacient_list_action"/>
-		
-		<menuitem id="metge_menu" name="Metges" parent="hospitalprincipal_menu"/>
-		<menuitem id="metge" name="Crear metge" parent="metge_menu" action="metge_list_action"/>
-
-		<menuitem id="malaltia_menu" name="Malalties" parent="hospitalprincipal_menu"/>
-		<menuitem id="malaltia" name="Crear malaltia" parent="malaltia_menu" action="malaltia_list_action"/>
-	
 		<menuitem id="visita_menu" name="Visites" parent="hospitalprincipal_menu"/>
 		<menuitem id="visita" name="Crear visita" parent="visita_menu" action="visita_list_action"/>
-	</data>
 
-
-	<!--Conjunt XML que enllaca aquest xml amb el de referencia que es el dades.xml-->
-	<data>
-		<record id="hr_view_employee_form_inherit" model="ir.ui.view">
-			<field name="name">mostradades</field>
-			<field name="model">hospitalmetge</field>
-			<field name="arch" type="xml">
-				<tree>
-					<field name="nom" position="after">
-						<field name="Nom"/>
-					</field>
-					<field name="cognoms" position="after">
-						<field name="Cognoms"/>
-					</field>
-					<field name="numSegSocial" position="after">
-						<field name="Numero seguretat social"/>
-					</field>
-					<field name="nif" position="after">
-						<field name="Nif"/>
-					</field>
-					<field name="telefon" position="after">
-						<field name="Telefon"/>
-					</field>
-					<field name="numEmpleat" position="after">
-						<field name="Numero empleat"/>
-					</field>
-					<field name="salariEmpleat" position="after">
-						<field name="Salari"/>
-					</field>
-					<field name="codiCompteCorrent" position="after">
-						<field name="Compte corrent"/>
-					</field>
-				</tree>
-			</field>
-		</record>
+    <data>
+      <record id="hr_view_Visita_form_inherit" model="ir.ui.view">
+        <field name="name">mostradades</field>
+        <field name="model">visita.pacient</field>
+        <field name="arch" type="xml">
+          <tree>
+            <field name="data" position="after">
+              <field name="data"/>
+            </field>
+          </tree>
+        </field>
+      </record>
+    </data>
+    
 	</data>
-	</odoo>
+</odoo>

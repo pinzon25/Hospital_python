@@ -1,5 +1,4 @@
 ﻿<odoo>
-	<!--#Made by Ricard Pinzon Suller-->
 	<data>
 		<record model="ir.actions.act_window" id="pacient_list_action">
 			<field name="name">Pacient</field>
@@ -8,14 +7,11 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 		
-		
-		
 		<menuitem id="Hospital_menu" name="Hospital"/>
 		<menuitem id="pacient_menu" name="Pacient" parent="Hospital_menu"/>
 		<menuitem id="pacient" name="crear pacient" parent="pacient_menu" action="pacient_list_action"/>
 	</data>
-
-	<!--Conjunt XML que enllaca aquest xml amb el de referencia que es el dades.xml-->
+  
 	<data>
 		<record id="hr_view_employee_form_inherit" model="ir.ui.view">
 			<field name="name">mostradades</field>
@@ -40,8 +36,5 @@
 				</tree>
 			</field>
 		</record>
-
-
 	</data>
-	
 </odoo>

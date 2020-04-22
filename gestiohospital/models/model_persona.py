@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
-#Made by Ricard Pinzon Suller
 from odoo import models, fields, api
-from . import adreca_persona #Ultim afegit
+from . import adreca_persona
 class Persona(models.Model):
     _name='metge.hospital'
 
@@ -30,37 +28,6 @@ class Persona(models.Model):
         required=True,
         size=9
         )
-    #ultim afegit
-    adreca= fields.Many2one( #Moltes persones poden tenir una adreca.
+    adreca= fields.Many2one(
         'adreca.hospital', 
         string='Adreca')
-
-
-
-
-
-#Made by Ricard Pinzon Suller
-#class Persona(ABC):
-#    def __init__(self, name, cognom1, cognom2, numSegSocial, nif, telefon):
-#        self.name = name
-#        self.cognom1 = cognom1
-#        self.cognom2 = cognom2
-#        self.numSegSocial = numSegSocial
-#        self.nif = nif
-#        self.telefon = telefon
-#
-#        @abstractmethod
-#        def FullName(self):
-#            return self.name + " " + self.cognom1 + " " + self.cognom2
-#
-#        @abstractmethod
-#        def NumSocialSeg(self):
-#            return self.numSegSocial
-#
-#        @abstractmethod
-#        def NifPersona(self):
-#            return nif
-#
-#        @abstractmethod
-#        def Telefon(self):
-#            return telefon

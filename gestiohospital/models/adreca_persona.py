@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from odoo import models, fields, api
 class Adreca(models.Model):
     _name='adreca.hospital'

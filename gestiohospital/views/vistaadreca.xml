@@ -1,5 +1,4 @@
 ﻿<odoo>
-	<!--#Made by Ricard Pinzon Suller-->
 	<data>
 		<record model="ir.actions.act_window" id="adreca_list_action">
 			<field name="name">Adreca</field>

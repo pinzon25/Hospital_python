@@ -1,5 +1,4 @@
 ﻿<odoo>
-	<!--#Made by Ricard Pinzon Suller-->
 	<data>
 		<record model="ir.ui.view" id="vista_dades_form">
 			<field name="name">vista_dades</field>
@@ -13,10 +12,6 @@
 				</tree>	
 			</field>
 		</record>
-
-
 	</data>
-
-
 </odoo>
 

@@ -1,9 +1,8 @@
 ﻿<odoo>
-	<!--#Made by Ricard Pinzon Suller-->
 	<data>
 		<record model="ir.ui.view" id="vista_dades_form">
 			<field name="name">vista_dades</field>
-			<field name="model">metge.hospital</field> <!--Aqui accedim al model abstracte Persona, que importara els camps als altres XML.-->
+			<field name="model">metge.hospital</field>
 			<field name="type">tree</field>
 			<field name="arch" type="xml">
 				<tree string="" name="Metges">
@@ -15,10 +14,6 @@
 				</tree>	
 			</field>
 		</record>
-
-
 	</data>
-
-
 </odoo>
 
