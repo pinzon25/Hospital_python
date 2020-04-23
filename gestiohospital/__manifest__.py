@@ -23,7 +23,7 @@
 
     # always loaded
     'data': [
-        'views/vistametge.xml',
+        'views/vistaprincipal.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode

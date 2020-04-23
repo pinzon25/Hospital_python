@@ -15,13 +15,3 @@ class Metgehospital(model_persona.Persona):
         string='Codi compte corrent',
         required=True,
         )
-   
-
-
-
-
-
-
-
-
-
