@@ -1,6 +1,7 @@
 from odoo import models, fields, api
 class Adreca(models.Model):
     _name='adreca.hospital'
+
     ciutat = fields.Char(
         string='Ciutat',
         required=True,
