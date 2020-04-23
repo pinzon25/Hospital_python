@@ -1,0 +1,7 @@
+diff a/gestiohospital/models/__init__.py b/gestiohospital/models/__init__.py	(rejected hunks)
+@@ -1,5 +1,4 @@
+ # -*- coding: utf-8 -*-
+-from . import models
+ from . import model_metge
+ from . import model_persona
+ from . import model_pacient
