@@ -1,5 +1,5 @@
 from odoo import models, fields, api
-class Malaltia(models.Model):
+class Malaltia(models.AbstractModel):
     _name='malaltia.pacient'
 
     codi=fields.Integer(

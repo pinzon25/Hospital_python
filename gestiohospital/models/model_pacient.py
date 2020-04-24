@@ -3,9 +3,10 @@ from . import model_persona
 class Pacienthospital(model_persona.Persona):
     _name='pacient.hospital'
 
-    _historial=fields.Integer(
-    string='Historial',
-       )
+    historial= fields.Many2one(
+        'historial.hospital', 
+        string='Historial'
+        )
 
    
    

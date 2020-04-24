@@ -5,3 +5,11 @@ class Visita(models.Model):
     data=fields.Date(
         string='Data',
         )
+
+    malaltia= fields.Many2one(
+        'malaltia.pacient', 
+        string='Malaltia')
+
+    metge= fields.Many2one(
+        'hospitalmetge.', 
+        string='Metge')
