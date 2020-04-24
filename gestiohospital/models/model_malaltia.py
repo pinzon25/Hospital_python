@@ -22,3 +22,7 @@ class Malaltia(models.AbstractModel):
     duradaTractament=fields.Date(
         string='Durada tractament',
         )
+
+    hospital= fields.Many2one(
+        'hospitalprincipal', 
+        string='Hospital')

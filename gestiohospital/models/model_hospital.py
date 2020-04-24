@@ -7,3 +7,7 @@ class Hospital(models.Model):
         string='Nom del Hospital',
         required=True,
         )
+
+    adreca= fields.Many2one(
+        'adreca.hospital', 
+        string='Adreca')

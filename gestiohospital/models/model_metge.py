@@ -15,3 +15,7 @@ class Metgehospital(model_persona.Persona):
         string='Codi compte corrent',
         required=True,
         )
+
+    hospital= fields.Many2one(
+        'hospitalprincipal', 
+        string='Hospital')

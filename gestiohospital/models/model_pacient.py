@@ -7,6 +7,3 @@ class Pacienthospital(model_persona.Persona):
         'historial.hospital', 
         string='Historial'
         )
-
-   
-   
