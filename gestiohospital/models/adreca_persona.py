@@ -28,5 +28,3 @@ class Adreca(models.Model):
         string='Porta'
         )
 
-
-
