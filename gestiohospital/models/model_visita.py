@@ -11,5 +11,5 @@ class Visita(models.Model):
         string='Malaltia')
 
     metge= fields.Many2one(
-        'hospitalmetge.', 
+        'hospitalmetge', 
         string='Metge')
